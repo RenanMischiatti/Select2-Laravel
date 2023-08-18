@@ -12,13 +12,19 @@
 
         <!-- Styles -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="{{asset('css/index.css')}}">
-        
+        <link rel="stylesheet" href="{{asset('components/select2/css/select.css')}}">
     </head>
     <body>
         
         <ul class="nav justify-content-center bg-dark p-2 sticky-top">
-            <select name="" id=""></select>
+            
+                <div class="col-9 col-md-4">
+
+                    <x-select-filter :function="'products'"></x-select-filter>
+                </div>
+            
         </ul>
         <main class="container">
             <section id="itens">
@@ -43,7 +49,9 @@
             </section>
         </main>
         
-        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="{{asset('components/select2/js/select2Filter.js')}}" defer></script>
     </body>
 </html>

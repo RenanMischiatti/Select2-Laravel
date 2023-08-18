@@ -1,6 +1,9 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\{
+    HomeController,
+    QueryController
+};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/query/{function}', [QueryController::class, 'main'])->name('query');
